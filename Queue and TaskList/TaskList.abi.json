@@ -1,0 +1,87 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "AddTask",
+			"inputs": [
+				{"name":"taskName","type":"string"},
+				{"name":"taskFlag","type":"bool"}
+			],
+			"outputs": [
+				{"name":"taskID","type":"uint8"}
+			]
+		},
+		{
+			"name": "NumberOfTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"countOfTasks","type":"uint8"}
+			]
+		},
+		{
+			"name": "ListOfTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"listOfTasks","type":"string[]"}
+			]
+		},
+		{
+			"name": "DescriptionOfTask",
+			"inputs": [
+				{"name":"taskID","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"taskName","type":"string"},
+				{"name":"addTime","type":"uint32"},
+				{"name":"taskFlag","type":"bool"}
+			]
+		},
+		{
+			"name": "DeleteTask",
+			"inputs": [
+				{"name":"taskID","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "MarkTask",
+			"inputs": [
+				{"name":"taskID","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "numTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"numTasks","type":"uint8"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"taskName","type":"string"},{"name":"addTime","type":"uint32"},{"name":"taskFlag","type":"bool"}],"name":"tasks","type":"map(uint8,tuple)"},
+		{"name":"addTime","type":"uint32"},
+		{"name":"numTasks","type":"uint8"}
+	]
+}
