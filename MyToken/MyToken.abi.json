@@ -1,0 +1,85 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"carModel","type":"string"},
+				{"name":"color","type":"string"},
+				{"name":"typeOfEngine","type":"string"},
+				{"name":"horsepower","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenInfo",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"tokenCarName","type":"string"},
+				{"name":"tokenCarColor","type":"string"},
+				{"name":"tokenCarTypeOfEngine","type":"string"},
+				{"name":"tokenCarHorsepower","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "setTokenPrice",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"},
+				{"name":"value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenPrice",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "changeOwner",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"},
+				{"name":"pubkeyOfNewOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"carModel","type":"string"},{"name":"color","type":"string"},{"name":"typeOfEngine","type":"string"},{"name":"horsepower","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"},
+		{"name":"tokenToPrice","type":"map(uint256,uint256)"}
+	]
+}
