@@ -71,6 +71,4 @@ contract MyToken {
         require(msg.pubkey() == tvm.pubkey(), 102);
         tvm.accept();
     }
-
-    
 }

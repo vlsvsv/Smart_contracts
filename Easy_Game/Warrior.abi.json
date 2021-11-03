@@ -1,0 +1,72 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAttackOfUnit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getDefenseOfUnit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "takeAttack",
+			"inputs": [
+				{"name":"gameObjectAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "attackUnit",
+			"inputs": [
+				{"name":"gameObject","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "baseUnitHealth",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"baseUnitHealth","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"warriorAttack","type":"uint256"},
+		{"key":2,"name":"warriorDefense","type":"uint256"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"baseUnitHealth","type":"uint256"},
+		{"name":"attackerAddress","type":"address"},
+		{"name":"unitAddress","type":"address"},
+		{"components":[{"name":"defenseOfObject","type":"uint256"},{"name":"attackOfObject","type":"uint256"}],"name":"stats","type":"map(address,tuple)"},
+		{"name":"warriorAttack","type":"uint256"},
+		{"name":"warriorDefense","type":"uint256"},
+		{"name":"warriorAddress","type":"address"}
+	]
+}

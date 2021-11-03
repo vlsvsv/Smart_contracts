@@ -1,0 +1,52 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "archerAttack",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"archerAttack","type":"uint256"}
+			]
+		},
+		{
+			"name": "archerDefense",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"archerDefense","type":"uint256"}
+			]
+		},
+		{
+			"name": "archerAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"archerAddress","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"archerAttack","type":"uint256"},
+		{"key":2,"name":"archerDefense","type":"uint256"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"archerAttack","type":"uint256"},
+		{"name":"archerDefense","type":"uint256"},
+		{"name":"archerAddress","type":"address"}
+	]
+}
