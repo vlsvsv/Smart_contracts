@@ -6,8 +6,8 @@ import "BattleUnit.sol";
 
 contract Archer is BattleUnit {
     
-    uint static public archerAttack;
-    uint static public archerDefense;
+    int static public archerAttack;
+    int static public archerDefense;
 
     address public archerAddress = address(this);
 
@@ -18,12 +18,12 @@ contract Archer is BattleUnit {
         stats[archerAddress] = statsOfObject(archerDefense + baseUnitHealth, archerAttack);
             }
 
-    function getAttackOfUnit() public override onlyOwner returns(uint) {
+    function getAttackOfUnit() public override onlyOwner returns(int) {
         unitAddress = archerAddress;
         return stats[unitAddress].attackOfObject;
     }
 
-    function getDefenseOfUnit() public override onlyOwner returns(uint) {
+    function getDefenseOfUnit() public override onlyOwner returns(int) {
         unitAddress = archerAddress;
         return stats[unitAddress].defenseOfObject;
     }

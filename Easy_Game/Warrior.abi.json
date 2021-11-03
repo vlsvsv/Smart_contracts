@@ -15,7 +15,7 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"uint256"}
+				{"name":"value0","type":"int256"}
 			]
 		},
 		{
@@ -23,7 +23,7 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"uint256"}
+				{"name":"value0","type":"int256"}
 			]
 		},
 		{
@@ -47,13 +47,13 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"baseUnitHealth","type":"uint256"}
+				{"name":"baseUnitHealth","type":"int256"}
 			]
 		}
 	],
 	"data": [
-		{"key":1,"name":"warriorAttack","type":"uint256"},
-		{"key":2,"name":"warriorDefense","type":"uint256"}
+		{"key":1,"name":"warriorAttack","type":"int256"},
+		{"key":2,"name":"warriorDefense","type":"int256"}
 	],
 	"events": [
 	],
@@ -61,12 +61,12 @@
 		{"name":"_pubkey","type":"uint256"},
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
-		{"name":"baseUnitHealth","type":"uint256"},
+		{"name":"baseUnitHealth","type":"int256"},
 		{"name":"attackerAddress","type":"address"},
 		{"name":"unitAddress","type":"address"},
-		{"components":[{"name":"defenseOfObject","type":"uint256"},{"name":"attackOfObject","type":"uint256"}],"name":"stats","type":"map(address,tuple)"},
-		{"name":"warriorAttack","type":"uint256"},
-		{"name":"warriorDefense","type":"uint256"},
+		{"components":[{"name":"defenseOfObject","type":"int256"},{"name":"attackOfObject","type":"int256"}],"name":"stats","type":"map(address,tuple)"},
+		{"name":"warriorAttack","type":"int256"},
+		{"name":"warriorDefense","type":"int256"},
 		{"name":"warriorAddress","type":"address"}
 	]
 }

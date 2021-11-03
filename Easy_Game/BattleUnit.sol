@@ -6,14 +6,14 @@ import "GameObjectInt.sol";
 
 contract BattleUnit is GameObjectInt {
 
-    uint public baseUnitHealth = 5;
+    int public baseUnitHealth = 5;
     address attackerAddress;
     address unitAddress;
 
 
     struct statsOfObject{  // структура характеристик объекта
-        uint defenseOfObject;
-        uint attackOfObject;
+        int defenseOfObject;
+        int attackOfObject;
     }
     
     mapping(address=>statsOfObject) stats; // связка адреса объекта с его характеристиками
@@ -50,11 +50,11 @@ contract BattleUnit is GameObjectInt {
         gameObject.takeAttack(gameObject);
     }
 
-    function getAttackOfUnit() virtual public onlyOwner returns(uint) {
+    function getAttackOfUnit() virtual public onlyOwner returns(int) {
         return stats[unitAddress].attackOfObject;
     }
 
-    function getDefenseOfUnit() virtual public onlyOwner returns(uint) {
+    function getDefenseOfUnit() virtual public onlyOwner returns(int) {
         return stats[unitAddress].defenseOfObject;
     }
 
